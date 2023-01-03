@@ -24,7 +24,7 @@ pipeline {
     stage ("ECS Deploy"){
       steps {
         script {
-      sh "aws ecs update-service --cluster food --service food --force-new-deployment"
+      sh "aws ecs update-service --cluster food --service food --force-new-deployment" --region ap-south-1
         }
       }
     }
