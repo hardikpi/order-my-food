@@ -21,8 +21,12 @@ pipeline {
         }
       }
   }
-    stage("ECS Deploy"){
+    stage ("ECS Deploy"){
+      steps {
+        script {
       sh "aws ecs update service --cluster food --service food --force-new-deployment"
+        }
+      }
     }
   }
   }
