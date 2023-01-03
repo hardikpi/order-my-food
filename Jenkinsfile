@@ -8,9 +8,7 @@ pipeline {
     stage ("Docker build") {
       steps {
         script {
-          sh 'cd server/'
-          sh 'ls'
-          sh 'docker build -t hardik .'
+          sh 'docker build -t hardik server/'
         }
        }
     }
